@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Links</title>
+	<style>
+		body{
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+		a{
+			color: green;
+		}
+		.a, .b, .c, .d{
+			margin: 30px;
+		}
+		.a a{
+			padding: 10px;
+			border-right: 3px solid red;
+		}
+		.a a:hover, .b a:hover, .c a:hover, .d a:hover{
+			color: red;
+		}
+		.b a{
+			padding: 10px 0 10px 10px;
+		}
+		
+		.b a::after{
+			content: '';
+			padding: 10px 1.5px;
+			background-color: red;
+			margin-left: 10px;
+		}
+		.c a{
+			padding: 10px 6px 10px 10px;
+		}
+		.c__marker{
+			width: 3px;
+			height: 37px;
+			background-color: red;
+			display: inline-block;
+			position: relative;
+			top: 10px;
+			left: 0;
+
+		}
+		.d a{
+			background: url(img/marker.png) top right no-repeat;
+			padding: 10px 13px 10px 10px;
+
+		}
+	</style>
+</head>
+<body>
+	<!--Маркер добавлен путем установки правой границы для тега <a>-->
+	<div class="a">
+		<a href="https://images.unsplash.com/photo-1610963294574-91b5ad1ffe02?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8NnNNVmpUTFNrZVF8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Первая ссылка</a>
+		<a href="https://images.unsplash.com/photo-1610632396243-f573dfa3fa1a?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Вторая ссылка</a>
+		<a href="https://images.unsplash.com/photo-1610694742744-1bef5a4e47f5?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDE4fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Третья ссылка</a>
+		<a href="https://images.unsplash.com/photo-1607877316498-03a00741c957?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDI5fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Четвертая ссылка</a>
+		<a href="https://www.google.com/" target="_blank">Пятая ссылка</a>
+	</div>
+		<!--Маркер добавлен с помощью псевдоэлемента :after-->
+
+	<div class="b">
+		<a href="https://images.unsplash.com/photo-1610963294574-91b5ad1ffe02?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8NnNNVmpUTFNrZVF8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Первая ссылка</a>
+		<a href="https://images.unsplash.com/photo-1610632396243-f573dfa3fa1a?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Вторая ссылка</a>
+		<a href="https://images.unsplash.com/photo-1610694742744-1bef5a4e47f5?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDE4fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Третья ссылка</a>
+		<a href="https://images.unsplash.com/photo-1607877316498-03a00741c957?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDI5fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Четвертая ссылка</a>
+		<a href="https://www.google.com/" target="_blank">Пятая ссылка</a>
+	</div>
+		<!--Маркер добавлен путем добавления тега <div>. В итоге получаем несколько пустых тегов, что плохо.-->
+	<div class="c">
+		<a href="https://images.unsplash.com/photo-1610963294574-91b5ad1ffe02?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8NnNNVmpUTFNrZVF8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Первая ссылка</a>
+		<div class="c__marker"></div>
+		<a href="https://images.unsplash.com/photo-1610632396243-f573dfa3fa1a?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Вторая ссылка</a>
+		<div class="c__marker"></div>
+		<a href="https://images.unsplash.com/photo-1610694742744-1bef5a4e47f5?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDE4fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Третья ссылка</a>
+		<div class="c__marker"></div>
+		<a href="https://images.unsplash.com/photo-1607877316498-03a00741c957?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDI5fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Четвертая ссылка</a>
+		<div class="c__marker"></div>
+		<a href="https://www.google.com/" target="_blank">Пятая ссылка</a>
+		<div class="c__marker"></div>
+	</div>
+	<div class="d">
+		<a href="https://images.unsplash.com/photo-1610963294574-91b5ad1ffe02?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8NnNNVmpUTFNrZVF8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Первая ссылка</a>
+		<a href="https://images.unsplash.com/photo-1610632396243-f573dfa3fa1a?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Вторая ссылка</a>
+		<a href="https://images.unsplash.com/photo-1610694742744-1bef5a4e47f5?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDE4fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Третья ссылка</a>
+		<a href="https://images.unsplash.com/photo-1607877316498-03a00741c957?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDI5fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" target="_blank">Четвертая ссылка</a>
+		<a href="https://www.google.com/" target="_blank">Пятая ссылка</a>
+		<div class="d__marker"></div>
+	</div>
+</body>
+</html>
